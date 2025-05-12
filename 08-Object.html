@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Object</title>
+</head>
+<body>
+
+<script>
+ const  product ={
+    name : 'tshirt' ,
+    'delivery-time':'1-day',
+    rating: {
+        stars : 4.5,
+        count :88
+    },
+    func : function function1() {
+        console.log('function inside an object');
+    }
+};
+
+ console.log ( product.name ); 
+ console.log ( product ['name'] ); 
+ console.log ( product  ['delivery-time']);
+ console.log (product.rating.count);
+    
+ product.func();                                //method : when we save function inside an object//
+
+ console.log (JSON.stringify(product));         //tihs will convert JS into JSON//
+
+ const jsonString = JSON.stringify(product);
+ console.log(JSON.parse(jsonString));           //tihs will convert JSON into JS//
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>	
+<html>
+<head>
+<title>Rock Paper Scissor</title>
+<style src="style/12-Game-AdvanceFunc.css">
+body{
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: arial;
+}
+
+.reset-button, 
+.autoPlay-css{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.move-button {
+    border-radius: 60px;
+    border: 3px solid white;
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.move-icon{
+    height: 50px;
+}
+
+.result{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.score{
+    margin-top: 50px;
+}
+
+.autoPlay-css{
+
+}
+</style>
+</head>
+
+	<body>
+	<p class="title">Rock paper scissor</p>
+
+	<button onclick="	
+	playGame ('rock');
+	"class = "move-button"><img src="Rock-paper-scissor-image/rock-emoji.png"class ="move-icon"></button>
+
+	<button onclick="
+	playGame ('paper');
+	"class = "move-button"><img src="Rock-paper-scissor-image/paper-emoji.png"class ="move-icon"></button>
+
+	<button onclick="
+	playGame ('scissors');
+	"class = "move-button"><img src="Rock-paper-scissor-image/scissors-emoji.png"class ="move-icon"></button>
+
+<p class="js-result result">You Loose</p>
+<p class="js-move"></p>
+<p class="js-score score"></p>
+
+
+
+<button onclick=" 
+	score.win = 0;
+	score.loose = 0;
+	score.tie = 0;
+	localStorage.removeItem('score');
+	updateScoreElement();
+	"class=reset-button>Reset score</button>
+
+<button class="autoPlay-css" onclick="
+autoPlay();
+">
+	Auto Play</button>
+<script src="script/12-Game-AdvanceFunc.js"></script>
+</body>
+</html>
